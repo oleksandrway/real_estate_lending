@@ -1,0 +1,35 @@
+:root {
+  --color-primary-dark: #203239;
+  --color-primary-light: rgba(32, 50, 57, 0.55);
+  --color-secondary-dark: #ff7527;
+  --color-secondary-light: rgba(255, 117, 39, 0.2);
+  --color-tertiary-dark: #d6d5c7;
+  --color-tertiary-light: #eeedde;
+}
+
+*,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-primary);
+  color: #eeedde;
+  color: #ff752733;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 11.6rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
