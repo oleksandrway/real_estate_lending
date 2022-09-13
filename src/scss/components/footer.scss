@@ -1,0 +1,48 @@
+.footer {
+  background-color: var(--color-primary-dark);
+  padding: 3rem 0;
+}
+
+.footer__logo {
+  width: 7.2rem;
+}
+
+.social {
+  display: flex;
+
+  gap: 5rem;
+  align-items: center;
+}
+
+.social__link {
+  padding: 1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.social__icon {
+  height: 2rem;
+}
+
+@screen <lg {
+  .social {
+    gap: 3rem;
+  }
+}
+@screen <sm {
+  .footer {
+    padding: 2rem 0;
+  }
+  .footer__logo {
+    width: 5.2rem;
+  }
+  .social {
+    gap: 1.3rem;
+  }
+  .social__icon {
+    height: 1.8rem;
+  }
+}
