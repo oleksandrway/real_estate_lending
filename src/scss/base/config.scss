@@ -20,16 +20,20 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--color-primary);
-  color: #eeedde;
-  color: #ff752733;
+  color: var(--color-primary-dark);
   font-weight: 300;
   line-height: 1.6;
   font-size: 1.6rem;
 }
 
 .container {
-  max-width: 11.6rem;
+  max-width: 123.6rem;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 3.5rem;
+}
+
+@screen <sm {
+  .container {
+    padding: 0 2.5rem;
+  }
 }

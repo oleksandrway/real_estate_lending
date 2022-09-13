@@ -15,15 +15,46 @@
   <title>Temukan Hunian Keluarga </title>
 </head>
 
-<body class="p-2rem">
-  <button class="btn btn--small btn--primary">Explore lebih banyak
-  </button>
-  <button class="btn btn--small btn--primary-transparent">Search
-  </button>
-  <button class="btn btn--padding-big btn--secondary">Email Now</button>
+<body>
+  <header class="header">
+    <div class="container flex justify-between items-center">
+      <div class="header__logo">
+        <img src="/logo.svg" alt="logo" />
+      </div>
+      <nav class="header__menu">
+        <ul class="header__menu-list header-menu">
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">Home</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">About</a>
+          </li>
+          <li class="header-menu__item properties-menu">
+            <button class="properties-menu__btn inline-flex gap-1.1rem items-center">Properties <img
+                src="/header/arrow.svg" alt=""></button>
+            <ul class="properties-menu__list">
+              <li class="properties-menu__item"><a href="#">lorem</a></li>
+              <li class="properties-menu__item"><a href="#">ipusm</a></li>
+              <li class="properties-menu__item"><a href="#">doler</a></li>
+              <li class="properties-menu__item"><a href="#">sit</a></li>
+              <li class="properties-menu__item"><a href="#">amet</a></li>
+            </ul>
 
-  <div class="h-10rem  bg-[#EEEDDE] temporary-devider"> </div>
-  <div class="h-10rem  bg-[#EEEDDE] temporary-devider"> </div>
+          </li>
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">Contact</a>
+          </li>
+        </ul>
+        <button class="header__menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="h-10rem  bg-red-200 temporary-devider"> </div>
+  <div class="h-10rem  bg-[var(--color-tertiary-light)] temporary-devider"> </div>
+
 
   <script type="module" src="/main.js"></script>
 </body>
