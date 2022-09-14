@@ -1,6 +1,6 @@
 .header {
   background-color: var(--color-tertiary-light);
-  padding: 5rem 0;
+  padding: 5rem 0 2.9rem 0;
 }
 
 .header__logo {
@@ -42,6 +42,7 @@
   width: 100%;
   transition: all 0.3s;
   text-align: center;
+  font-weight: 300;
 
   button {
     font-weight: 300;
@@ -152,10 +153,10 @@
   .header-menu {
     position: absolute;
     height: 0;
-    width: 25rem;
+    width: 50%;
     left: 50%;
     transform: translateX(-50%);
-    top: 10rem;
+    top: 4rem;
     background-color: var(--color-tertiary-light);
 
     display: flex;
@@ -191,7 +192,6 @@
   }
 
   .properties-menu__list {
-    // position: relative;
     top: -12rem;
   }
 }

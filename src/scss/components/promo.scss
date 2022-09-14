@@ -1,0 +1,137 @@
+.promo {
+  padding: 0 0 5.8rem 0;
+  background-color: var(--color-tertiary-light);
+}
+
+.promo__img {
+  width: 34.4%;
+}
+
+.promo__container {
+  display: flex;
+  align-items: start;
+}
+
+.promo__title {
+  margin-top: 6.3rem;
+}
+
+.promo__desc {
+  margin-top: 2.35rem;
+  color: var(--color-primary-light);
+  max-width: 55rem;
+}
+
+.promo__form {
+  margin-top: 5.5rem;
+  max-width: 88%;
+}
+
+.promo-form {
+  display: flex;
+  padding: 1rem 1.5rem 1rem 5.6rem;
+  border-radius: 1.5rem;
+  align-items: center;
+  background: url("/promo/search.svg") no-repeat scroll 2.3rem 2.4rem;
+  background-color: #fff;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 0.2rem var(--color-primary-light);
+  }
+}
+
+.promo-form__input {
+  width: 100%;
+  outline: none;
+  font-weight: 300;
+}
+
+.promo-facts {
+  display: flex;
+  gap: 8.4rem;
+  margin-top: 5.7rem;
+  max-width: 59rem;
+  padding-left: 0.3rem;
+}
+
+.promo-facts__item {
+  flex: 0 0 23%;
+  transition: all 0.3s;
+
+  &:nth-of-type(2) {
+    .promo-facts__header {
+      align-items: end;
+      img {
+        width: 5.8rem;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.promo-facts__header {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 4.5rem;
+  }
+}
+
+.promo-facts__title {
+  font-weight: 600;
+  font-size: 5.6rem;
+  line-height: 1.5;
+}
+
+@screen <lg {
+  .promo__container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .promo__img {
+    width: 45%;
+    min-width: 17rem;
+  }
+
+  .promo__form {
+    max-width: 55rem;
+  }
+}
+
+@screen <sm {
+  .promo__title {
+    text-align: center;
+    margin-top: 3.3rem;
+  }
+
+  .promo-form {
+    height: 7rem;
+    position: relative;
+    margin-top: 3.5rem;
+  }
+
+  .promo-form__btn {
+    position: absolute;
+    bottom: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .promo-facts {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    margin-top: 10rem;
+  }
+
+  .promo-facts__item {
+    width: 14.2rem;
+  }
+}

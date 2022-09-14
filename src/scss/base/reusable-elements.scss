@@ -3,7 +3,7 @@
   font-weight: 600;
   transition: all 0.3s;
   padding: 1.3rem 4.1rem;
-
+  line-height: 1.5;
   &--padding-big {
     padding: 1.3rem 5.5rem;
   }
@@ -38,10 +38,43 @@
 }
 
 .title-1 {
+  font-weight: 600;
+  font-size: 5.6rem;
+  line-height: 1.5;
 }
 
 .title-2 {
 }
 
-.title-3 {
+.desc {
+  font-weight: 300;
+  line-height: 1.9;
+  &--light {
+    color: var(--color-primary-light);
+  }
+}
+
+@screen <xl {
+  .title-1 {
+    font-size: 3.6rem;
+  }
+}
+
+@screen <md {
+  .title-1 {
+    font-size: 3.6rem;
+  }
+}
+@screen <sm {
+  .btn {
+    width: 100%;
+    max-width: 29rem;
+  }
+  .title-1 {
+    font-size: 2.2rem;
+  }
+
+  .desc {
+    text-align: justify;
+  }
 }
