@@ -36,8 +36,9 @@
   background-color: #fff;
   transition: all 0.3s;
 
-  &:hover {
-    box-shadow: inset 0px 0px 0px 0.2rem var(--color-primary-light);
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 0px 0.5rem 0.2rem var(--color-primary-light);
   }
 }
 
