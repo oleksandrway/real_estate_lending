@@ -12,6 +12,7 @@
     "@gitart/eslint-config-basic": "^0.2.0",
     "eslint": "^8.21.0",
     "sass": "^1.54.0",
+    "swiper": "^8.4.2",
     "vite": "^3.1.0",
     "vite-plugin-windicss": "^1.8.7",
     "windicss": "^3.5.6"

@@ -21,14 +21,14 @@
 }
 
 .contacts-tile {
-  box-shadow: inset 0px 0px 0px 0.1rem var(--color-secondary-light);
+  box-shadow: inset 0px 0px 0px 0.1rem var(--color-secondary-medium);
   padding: 2.4rem;
   text-align: center;
   transition: all 0.3s;
 
   &:hover {
-    box-shadow: inset 0px 0px 0px 0.1rem var(--color-secondary-light),
-      0px 0px 0.5rem 0.2rem var(--color-secondary-light);
+    box-shadow: inset 0px 0px 0px 0.1rem var(--color-secondary-medium),
+      0px 0px 0.5rem 0.1rem var(--color-secondary-medium);
   }
 }
 

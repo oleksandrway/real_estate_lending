@@ -2,6 +2,7 @@
   --color-primary-dark: #203239;
   --color-primary-light: rgba(32, 50, 57, 0.55);
   --color-secondary-dark: #ff7527;
+  --color-secondary-medium: rgba(255, 117, 39, 0.5);
   --color-secondary-light: rgba(255, 117, 39, 0.2);
   --color-tertiary-dark: #d6d5c7;
   --color-tertiary-light: #eeedde;
@@ -43,4 +44,8 @@ body {
 }
 .text--secondary-light {
   color: var(--color-secondary-light);
+}
+
+.text--primary-light {
+  color: var(--color-primary-light);
 }
