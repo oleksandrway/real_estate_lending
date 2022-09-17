@@ -5,6 +5,14 @@
 
 .footer__logo {
   width: 7.2rem;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    path {
+      fill: var(--color-secondary-dark);
+    }
+  }
 }
 
 .social {
@@ -20,6 +28,9 @@
 
   &:hover {
     transform: scale(1.15);
+    path {
+      fill: var(--color-secondary-dark);
+    }
   }
 }
 
