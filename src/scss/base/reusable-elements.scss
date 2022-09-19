@@ -97,6 +97,15 @@
     font-size: 3.2rem;
   }
 }
+@screen <lg {
+  .title-1 {
+    font-size: 3.3rem;
+  }
+
+  .title-2 {
+    font-size: 3rem;
+  }
+}
 
 @screen <md {
   .title-1 {
