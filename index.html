@@ -33,11 +33,11 @@
             <button class="properties-menu__btn inline-flex gap-1.1rem items-center">Properties <img
                 src="/header/arrow.svg" alt=""></button>
             <ul class="properties-menu__list">
-              <li class="properties-menu__item"><a href="#">lorem</a></li>
-              <li class="properties-menu__item"><a href="#">ipusm</a></li>
+              <li class="properties-menu__item"><a href="#"> pilihan</a></li>
+              <li class="properties-menu__item"><a href="#"> lokasi</a></li>
               <li class="properties-menu__item"><a href="#">doler</a></li>
-              <li class="properties-menu__item"><a href="#">sit</a></li>
-              <li class="properties-menu__item"><a href="#">amet</a></li>
+              <li class="properties-menu__item"><a href="#"> strategis</a></li>
+              <li class="properties-menu__item"><a href="#">dengan</a></li>
             </ul>
 
           </li>
@@ -56,11 +56,12 @@
     <div class="container promo__container">
       <div class="promo__content">
         <h1 class="promo__title title-1">Temukan Hunian Keluarga Sesi Keinginanmu</h1>
-        <h2 class="promo__desc desc text--primary-light">Menyediakan hunian bagi keluarga anda dengan varian pilihan dan
+        <h2 class="promo__desc desc text-primary-light">Menyediakan hunian bagi keluarga anda dengan varian pilihan dan
           lokasi
           yang strategis di
           kota anda dengan cara yang lebih mudah.</h2>
         <form class="promo__form promo-form">
+          <!-- <img class="promo-form__icon" src="/promo/search.svg" alt="search"> -->
           <input class="promo-form__input" name="search" type="text"
             placeholder="Search location, properties, residental group">
           <button type="submit" class="promo-form__btn btn btn--primary ">Search</button>
@@ -73,15 +74,15 @@
               <img src="/promo/plus.svg" alt="plus icon">
 
             </div>
-            <p class="promo-facts__desc desc text--primary-light">Residental grup telah bergabung</p>
+            <p class="promo-facts__desc desc text-primary-light">Residental grup telah bergabung</p>
           </div>
           <div class="promo-facts__item">
-            <div class="promo-facts__header">
+            <div class="promo-facts__header promo-facts__header--bottom-img">
               <h3 class="promo-facts__title">10</h3>
               <img src="/promo/tahun.png" alt="tahun icon">
 
             </div>
-            <p class="promo-facts__desc desc text--primary-light">Sudah berpengalaman </p>
+            <p class="promo-facts__desc desc text-primary-light">Sudah berpengalaman </p>
           </div>
           <div class="promo-facts__item">
             <div class="promo-facts__header">
@@ -89,15 +90,16 @@
               <img src="/promo/plus.svg" alt="plus icon">
 
             </div>
-            <p class="promo-facts__desc desc text--primary-light">Properti tersedia di berbagai Kota</p>
+            <p class="promo-facts__desc desc text-primary-light">Properti tersedia di berbagai Kota</p>
           </div>
 
         </div>
       </div>
 
 
-
-      <img src="/promo/house.png" alt="house image" class="promo__img">
+      <div class="promo__img">
+        <img src="/promo/house.png" alt="house image">
+      </div>
 
     </div>
   </section>
@@ -105,14 +107,14 @@
 
   <section class="stages">
     <div class="container">
-      <h2 class="title-2 stages__title">Tahapan Pembelian Properti yang Mudah dan Cepat</h2>
+      <h2 class="title-2 max-w-53rem">Tahapan Pembelian Properti yang Mudah dan Cepat</h2>
       <div class="stages__container">
         <div class="stages__item stages-item">
           <div class="stages-item__header">
             <h3 class="stages-item__title">Pilih Properti</h3>
             <div class="stages-item__number">01</div>
           </div>
-          <p class="mt-0.9rem mb-auto desc  text--primary-light">
+          <p class="mt-0.9rem mb-auto desc  text-primary-light">
             Cari properti yang diinginkan sesuai dengan kriteria anda dan keluarga. Cara memilih properti yang bijak
             dapat anda baca lebih lanjut di sini
           </p>
@@ -127,7 +129,7 @@
             <div class="stages-item__number">02</div>
           </div>
 
-          <p class="mt-0.9rem mb-auto desc text--primary-light">Pembayaran dalam bentuk sejumlah uang sebagai komitmen
+          <p class="mt-0.9rem mb-auto desc text-primary-light">Pembayaran dalam bentuk sejumlah uang sebagai komitmen
             memesan
             unit properti tertentu.</p>
           <button class="stages-item__btn">Baca lebih Lanjut <img src="/stages/arrow.svg" alt="arrow icon"></button>
@@ -138,7 +140,7 @@
             <div class="stages-item__number">03</div>
           </div>
 
-          <p class="mt-0.9rem mb-auto desc text--primary-light">Pembiayaan KPR untuk pembeli rumah dengan skema
+          <p class="mt-0.9rem mb-auto desc text-primary-light">Pembiayaan KPR untuk pembeli rumah dengan skema
             pembiayaan
             jika diperlukan dan dilanjutkan proses sertifkasi HGB.</p>
           <button class="stages-item__btn">Baca lebih Lanjut <img src="/stages/arrow.svg" alt="arrow icon"></button>
@@ -149,7 +151,7 @@
 
   <section class="favorite">
     <div class="container">
-      <p class="text--secondary-dark <sm:text-center">Pilihan konsumen</p>
+      <p class="text-secondary-dark ">Pilihan konsumen</p>
       <h2 class="title-2 mt-0.7rem">Residen Favorit</h2>
       <div class="favorite__container">
         <div class="favorite__images">
@@ -165,7 +167,7 @@
             profesional dengan para Arsitektur ternama dan Developer yang terpercaya.</p>
           <div class="favorite-content__btns">
 
-            <button class="btn btn--primary-transparent">
+            <button id="favorite-modal-btn" class="btn btn--primary-outlined ">
               <img class="w-2.3rem h-2.3rem" src="/reusable/phone.svg" alt="phone icon">
               Hubungi Kami
             </button>
@@ -180,11 +182,16 @@
 
   </section>
 
+  <div hidden class="favorite-modal">
+    <h1>ahoy </h1>
+    <input type="text"><input type="text"><input type="text">
+  </div>
+
   <section class="options">
     <div class="container">
 
       <div class="options__slider  swiper">
-        <p class="text--secondary-dark <sm:text-center">Pilihan Auditor</p>
+        <p class="text-secondary-dark ">Pilihan Auditor</p>
         <h2 class="title-2 mt-0.7rem">Residen Berbagai Kota</h2>
 
         <div class="swiper-wrapper mt-6.4rem  <lg:mt-3rem <sm:max-w-30rem">
@@ -248,12 +255,14 @@
     </div>
   </section>
 
+
+
   <section class="info">
     <div class="container info__container ">
 
       <div>
         <h2 class="title-2">Hubungi Kami</h2>
-        <div class="info__contacts info__content">
+        <div class="info__contacts mt-6.3rem <lg:mt-2.3rem <sm:justify-center">
           <div class="contacts-tile radi rounded-1rem">
             <div class="contacts-tile__header">
               <img src="/reusable/phone.svg" alt="phone icon">
@@ -280,7 +289,7 @@
 
       <div>
         <h2 class="title-2 ">Penghargaan</h2>
-        <div class="info-images info__content">
+        <div class="info-images mt-6.3rem  <lg:mt-2.3rem <sm:justify-center">
           <div class="info-images__item">
             <img src="info/award-1.png" alt="award ">
           </div>

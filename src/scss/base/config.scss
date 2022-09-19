@@ -8,13 +8,6 @@
   --color-tertiary-light: #eeedde;
 }
 
-*,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-size: 62.5%; // 1rem = 10px
 }
@@ -33,19 +26,28 @@ body {
   padding: 0 3.5rem;
 }
 
+@screen <md {
+  body {
+    font-size: 1.4rem;
+  }
+  html {
+    // font-size: 50%; // 1rem = 10px
+  }
+}
+
 @screen <sm {
   .container {
     padding: 0 2.5rem;
   }
 }
 
-.text--secondary-dark {
+.text-secondary-dark {
   color: var(--color-secondary-dark);
 }
-.text--secondary-light {
+.text-secondary-light {
   color: var(--color-secondary-light);
 }
 
-.text--primary-light {
+.text-primary-light {
   color: var(--color-primary-light);
 }

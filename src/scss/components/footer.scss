@@ -23,8 +23,8 @@
 }
 
 .social__link {
-  padding: 1rem;
   transition: all 0.3s;
+  padding: 1.5rem;
 
   &:hover {
     transform: scale(1.15);
@@ -40,7 +40,7 @@
 
 @screen <lg {
   .social {
-    gap: 3rem;
+    gap: 2.5rem;
   }
 }
 @screen <sm {
@@ -51,7 +51,7 @@
     width: 5.2rem;
   }
   .social {
-    gap: 1.3rem;
+    gap: 1rem;
   }
   .social__icon {
     height: 1.8rem;
