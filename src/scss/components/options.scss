@@ -36,9 +36,9 @@
 }
 
 .swiper-slide__img {
-  height: 45rem;
   border-radius: 1rem;
   overflow: hidden;
+  aspect-ratio: 1/1.28;
   img {
     width: 100%;
     height: 100%;
@@ -48,19 +48,31 @@
 
 @screen <lg {
   .swiper__controls {
-    right: 18%;
+    right: 10.1%;
   }
 }
 
 @screen <md {
   .swiper {
-    padding: 4rem 0 10rem 0;
+    padding: 4rem 0;
+  }
+  .swiper__controls {
+    top: 7.2rem;
+  }
+  .swiper-slide__img {
+    aspect-ratio: 1.2/1;
+  }
+}
+
+@screen <sm {
+  .swiper {
+    padding: 4rem 0 7rem 0;
   }
 
   .swiper__controls {
     top: auto;
     right: auto;
-    bottom: 3rem;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
   }
