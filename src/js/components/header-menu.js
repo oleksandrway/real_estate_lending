@@ -32,9 +32,11 @@ headerMenuBtn.addEventListener('click', () => {
 const propertiesMenuBtn = document.querySelector('.properties__menu-btn')
 const properties = document.querySelector('.properties')
 const propertiesList = document.querySelector('.properties__menu-content')
+// const propertiesMenuTile = document.querySelector('.properties-menu')
 
 function closePropertiesMenu(e) {
-  if (!e.target.closest('.properties__menu-btn')) { // have to check because menu doesn't open without it and  can't check if it's 'propertiesBtn' because there is img inside of it
+  if ((!e.target.closest('.properties__menu-btn') && !e.target.closest('.properties__menu-content')) //   can't check if it's 'propertiesBtn' because there is img inside of it
+  || e.target.closest('.properties-menu__item')) {
     properties.classList.remove('properties--active')
     propertiesList.style.maxHeight = null
     document.removeEventListener('click', closePropertiesMenu)
