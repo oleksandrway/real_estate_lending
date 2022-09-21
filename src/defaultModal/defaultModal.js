@@ -1,8 +1,8 @@
 
 import './defaultModal.scss'
 
-function createModal({ preContentClass, closingParameters }) {
-  const preContent = document.querySelector(preContentClass)
+function createModal({ openBtnSelector, preContentSelector, closingParameters }) {
+  const preContent = document.querySelector(preContentSelector)
   let content
   if (!preContent || typeof preContent === 'string') {
     console.warn('you should pass a class of  element in function openModal')
@@ -16,7 +16,7 @@ function createModal({ preContentClass, closingParameters }) {
   }
 
   const defaultOverlay = document.createElement('div')
-  defaultOverlay.className = 'defaultOverlay defaultOverlay--active'
+  defaultOverlay.className = 'defaultOverlay '
 
   function hideModal() {
     defaultOverlay.classList.remove('defaultOverlay--active')
@@ -59,21 +59,14 @@ function createModal({ preContentClass, closingParameters }) {
     }
   }
 
-  return defaultOverlay
+  document.body.appendChild(defaultOverlay)
+
+  const openBtn = document.querySelector(openBtnSelector)
+
+  openBtn.addEventListener('click', () => {
+    defaultOverlay.classList.add('defaultOverlay--active')
+    document.body.classList.add('no-scroll')
+  })
 }
 
-function openModal({ preContentClass, closingParameters }) {
-  const contentInModal = document.querySelector(`.defaultOverlay ${preContentClass}`)
-  if (contentInModal) {
-    const modal = contentInModal.closest('.defaultOverlay')
-    modal.classList.add('defaultOverlay--active')
-  }
-  else {
-    const modal = createModal({ preContentClass, closingParameters })
-    document.body.appendChild(modal)
-  }
-
-  document.body.classList.add('no-scroll')
-}
-
-export { openModal }
+export { createModal }
