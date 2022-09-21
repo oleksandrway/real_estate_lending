@@ -1,12 +1,7 @@
 
-// function createElement() {
-
-// }
-
 import './defaultModal.scss'
 
-function createModal(preContent) {
-  // const precontent = document.querySelector(modalContent);
+function createModal({ preContent, closeElementsClasses }) {
   let content
   if (!preContent || typeof preContent === 'string') {
     console.warn('you should pass an element in function openModal')
@@ -33,9 +28,6 @@ function createModal(preContent) {
 
   const modalClose = document.createElement('div')
 
-  // modalClose.dataset.closeModal = true;
-  // modalClose.setAttribute('data-close-modal', 'true')
-
   modalClose.className = 'modal__close'
   const span1 = document.createElement('span')
   const span2 = document.createElement('span')
@@ -48,24 +40,28 @@ function createModal(preContent) {
   defaultModal.append(content)
 
   modalClose.addEventListener('click', removeModal)
+
   defaultOverlay.addEventListener('click', (e) => {
-    // if (e.target === defaultOverlay || e.target.dataset.closeModal) {
     if (e.target === defaultOverlay)
-      removeModal(defaultOverlay)
+      removeModal()
   })
   document.addEventListener('keydown', (e) => {
     if (e.code === 'Escape')
-      removeModal(defaultOverlay)
+      removeModal()
   })
+
+  if (closeElementsClasses.length) {
+    closeElementsClasses.forEach((closeElementClass) => {
+      const closeElement = defaultOverlay.querySelector(closeElementClass)
+      closeElement.addEventListener('click', removeModal)
+    })
+  }
 
   return defaultOverlay
 }
 
-function openModal(modalClass) {
-  // const content = document.querySelector(modalClass).cloneNode(true);
-  // const content = document.querySelector(modalClass);
-
-  const defaultModal = createModal(modalClass)
+function openModal({ preContent, closeElementsClasses }) {
+  const defaultModal = createModal({ preContent, closeElementsClasses })
 
   document.body.appendChild(defaultModal)
 

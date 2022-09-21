@@ -62,10 +62,21 @@
   &--secondary-light {
     background-color: var(--color-secondary-light);
     color: var(--color-secondary-dark);
-
+    &:active,
     &:hover {
       color: #fff;
       background-color: var(--color-secondary-dark);
+    }
+  }
+  &--secondary-dark {
+    background-color: var(--color-secondary-dark);
+    color: #fff;
+
+    &:active,
+    &:hover {
+      &:after {
+        background-color: var(--color-primary-dark);
+      }
     }
   }
 }

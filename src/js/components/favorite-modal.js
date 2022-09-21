@@ -4,5 +4,5 @@ const favoriteModalBtn = document.querySelector('#favorite-modal-btn')
 const favoriteModal = document.querySelector('.favorite-modal')
 
 favoriteModalBtn.addEventListener('click', () => {
-  openModal(favoriteModal)
+  openModal({ preContent: favoriteModal, closeElementsClasses: ['.order-call__btn'] })
 })
