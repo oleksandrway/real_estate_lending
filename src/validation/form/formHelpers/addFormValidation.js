@@ -25,7 +25,6 @@ function addFormValidation(form, fields, fieldsValidationRules, handleData) {
 
   form.addEventListener('input', () => {
     if (haveValidationError) {
-      console.log('a')
       const data = getDataFromForm(form, fields)
 
       const errors = validateData(data, fieldsValidationRules)
