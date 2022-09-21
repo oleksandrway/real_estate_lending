@@ -54,7 +54,8 @@ propertiesMenuBtn.addEventListener('click', () => {
   }
   else {
     propertiesList.style.maxHeight = `${propertiesList.scrollHeight}px`
-    headerMenu.style.maxHeight = `${headerMenu.scrollHeight + propertiesList.scrollHeight}px`
     document.addEventListener('click', closePropertiesMenu)
+    if (headerMenu.style.maxHeight)
+      headerMenu.style.maxHeight = `${headerMenu.scrollHeight + propertiesList.scrollHeight}px`
   }
 })

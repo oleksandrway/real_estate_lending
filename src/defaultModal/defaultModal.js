@@ -1,13 +1,13 @@
 
 import './defaultModal.scss'
 
-function createModal({ preContentClass, closeElementsClasses }) {
+function createModal({ preContentClass, closingParameters }) {
   const preContent = document.querySelector(preContentClass)
   let content
   if (!preContent || typeof preContent === 'string') {
     console.warn('you should pass a class of  element in function openModal')
     content = document.createElement('div')
-    content.classList.add('error')
+    content.classList.add('errorMessage')
     content.innerText = 'not found'
   }
   else {
@@ -50,25 +50,26 @@ function createModal({ preContentClass, closeElementsClasses }) {
       hideModal()
   })
 
-  if (closeElementsClasses.length) {
-    closeElementsClasses.forEach((closeElementClass) => {
-      const closeElement = defaultOverlay.querySelector(closeElementClass)
-      if (closeElement)
-        closeElement.addEventListener('click', hideModal)
-    })
+  if (closingParameters) {
+    for (let i = 0; i < Object.keys(closingParameters).length; i++) {
+      const elementClass = Object.keys(closingParameters)[i]
+      const event = Object.values(closingParameters)[i]
+      const element = defaultModal.querySelector(elementClass)
+      element.addEventListener(event, hideModal)
+    }
   }
 
   return defaultOverlay
 }
 
-function openModal({ preContentClass, closeElementsClasses }) {
+function openModal({ preContentClass, closingParameters }) {
   const contentInModal = document.querySelector(`.defaultOverlay ${preContentClass}`)
   if (contentInModal) {
     const modal = contentInModal.closest('.defaultOverlay')
     modal.classList.add('defaultOverlay--active')
   }
   else {
-    const modal = createModal({ preContentClass, closeElementsClasses })
+    const modal = createModal({ preContentClass, closingParameters })
     document.body.appendChild(modal)
   }
 
