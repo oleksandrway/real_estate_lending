@@ -11,6 +11,7 @@ function closeHeaderMenu(e) {
     headerMenuWrapper.classList.remove('header__menu-wrapper--active')
     document.removeEventListener('click', closeHeaderMenu)
     headerMenu.style.maxHeight = null
+    document.body.classList.remove('no-scroll')
   }
 }
 
@@ -20,10 +21,12 @@ headerMenuBtn.addEventListener('click', () => {
   if (headerMenu.style.maxHeight) {
     headerMenu.style.maxHeight = null
     document.removeEventListener('click', closeHeaderMenu)
+    document.body.classList.remove('no-scroll')
   }
   else {
     headerMenu.style.maxHeight = `${headerMenu.scrollHeight}px`
     document.addEventListener('click', closeHeaderMenu)
+    document.body.classList.add('no-scroll')
   }
 })
 
@@ -32,7 +35,6 @@ headerMenuBtn.addEventListener('click', () => {
 const propertiesMenuBtn = document.querySelector('.properties__menu-btn')
 const properties = document.querySelector('.properties')
 const propertiesList = document.querySelector('.properties__menu-content')
-// const propertiesMenuTile = document.querySelector('.properties-menu')
 
 function closePropertiesMenu(e) {
   if ((!e.target.closest('.properties__menu-btn') && !e.target.closest('.properties__menu-content')) //   can't check if it's 'propertiesBtn' because there is img inside of it
